@@ -27,13 +27,13 @@ mv $PAKFILE ../
 echo "Creating bin.pk3"
 
 if [ "`uname`" = "Darwin" ]; then
-        cd "../../build/$TARGET-darwin-i386/main/"
+        cd "../../build/$TARGET-darwin-x86/main/"
         zip -r bin.pk3 *.dylib
         cp bin.pk3 ~/Library/Application\ Support/Wolfenstein/main/
         mv bin.pk3 ../../../media/
 fi
 if [ "`uname`" = "Linux" ]; then
-        cd "../../build/$TARGET-linux-i386/main/"
+        cd "../../build/$TARGET-linux-x86/main/"
         zip -r bin.pk3 *.so
         cp bin.pk3 ~/.wolf/main/
         mv bin.pk3 ../../../media/
